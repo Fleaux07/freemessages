@@ -1,0 +1,126 @@
+/* Réinitialisation de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+}
+
+/* Le conteneur principal de l'application */
+.app-container {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    height: 80vh;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* L'en-tête bleu */
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.header #nom-canal {
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* Zone de connexion (pour entrer la clé) */
+#zone-connexion {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+/* Zone de chat */
+#zone-chat {
+    display: none; /* Caché au début */
+    flex-direction: column;
+    height: 100%;
+}
+
+/* La boîte où s'affichent les messages */
+#messages {
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    padding: 20px;
+    overflow-y: auto; /* Permet de scroller */
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Style d'une bulle de message */
+.message-bulle {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    align-self: flex-start; /* Aligne les messages à gauche par défaut */
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* La zone en bas pour taper son message */
+.input-zone {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+/* Style des champs de texte */
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+/* Style des boutons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
